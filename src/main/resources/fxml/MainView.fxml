@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="335.0" prefWidth="508.0" styleClass="shadow-pane" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edencoding.controllers.MainViewController">
+    <center>
+        <VBox id="dragTarget" prefHeight="315.0" prefWidth="656.0" spacing="10" styleClass="background-pane">
+         <children>
+            <AnchorPane prefHeight="62.0" prefWidth="769.0">
+               <children>
+                  <Text layoutX="199.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E1201-E1204" wrappingWidth="166.70828247070312" />
+                  <Button fx:id="handleExitButtonClicked2" layoutX="534.0" layoutY="6.0" maxWidth="84.0" minHeight="25.0" minWidth="46.0" mnemonicParsing="false" onAction="#handleExitButtonClicked2" prefHeight="30.0" prefWidth="46.0" styleClass="exit-button" text="Button" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="67.0" prefWidth="438.0">
+               <children>
+                  <Text layoutX="70.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CREATION PDF" wrappingWidth="108.286865234375" />
+                  <Button fx:id="GEN1" layoutX="24.0" layoutY="22.0" maxHeight="44.0" maxWidth="249.0" mnemonicParsing="false" onAction="#ACTGEN1" prefHeight="44.0" prefWidth="249.0" styleClass="start" text="Génération PDF" textFill="WHITE" />
+                  <Button fx:id="GEN2" layoutX="299.0" layoutY="22.0" maxWidth="134.0" mnemonicParsing="false" onAction="#ACTGEN2" prefHeight="20.0" prefWidth="134.0" styleClass="start" text="Génération PDF 2" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="61.0" prefWidth="438.0">
+               <children>
+                  <Text layoutX="69.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MOT DE PASSE" wrappingWidth="129.0206298828125" />
+                  <Button fx:id="SIGNER" layoutX="298.0" layoutY="20.0" mnemonicParsing="false" onAction="#ACTSIGNE" styleClass="start" text="PDFSIGNE" textFill="WHITE" />
+                  <Button fx:id="SUPPRIMER" layoutX="24.0" layoutY="21.0" maxHeight="35.0" maxWidth="173.0" mnemonicParsing="false" onAction="#ACTSUPP" prefHeight="35.0" prefWidth="173.0" styleClass="start" text="SUPPRIMER" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ChoiceBox fx:id="USER" layoutX="24.0" layoutY="14.0" prefWidth="150.0" styleClass="start" />
+                  <Label fx:id="ENCOURS" layoutX="305.0" layoutY="18.0" prefHeight="14.0" prefWidth="34.0" text="Label" textFill="WHITE" />
+                  <Label fx:id="TOTAL" layoutX="237.0" layoutY="52.0" prefHeight="14.0" prefWidth="106.0" text="Pièces crées: " />
+                  <ProgressBar fx:id="Progressbar" layoutX="24.0" layoutY="52.0" prefWidth="200.0" progress="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+        </VBox>
+    </center>
+</BorderPane>
